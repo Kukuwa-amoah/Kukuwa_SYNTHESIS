@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kukuwa Amoah">
+    <meta name="description" content="Student Food Hub: affordable meals and student survival tips.">
+
+    <title>Student Food Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="#home">🍲 Student Food Hub</a>
+
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#survival">Survival Tips</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero" id="home">
+            <p class="eyebrow">GOOD FOOD. SMART SPENDING.</p>
+            <h1>Student life is hard enough. Food shouldn't be.</h1>
+            <p>
+                Find your favourite meals, customise your order
+                and keep your budget under control.
+            </p>
+            <a class="primary-link" href="#menu">Explore the menu ↓</a>
+        </section>
+    </header>
+
+    <main class="container">
+
+        <section id="menu" class="page-section">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT'S COOKING?</p>
+                <h2>Today's menu</h2>
+                <p>Choose a meal and build your perfect order.</p>
+            </div>
+
+            <div id="menuCards" class="menu-grid"></div>
+            <p id="menuMessage" class="notice" aria-live="polite"></p>
+        </section>
+
+        <section id="order" class="page-section order-layout">
+            <div class="form-panel">
+                <p class="eyebrow">YOUR MEAL, YOUR WAY</p>
+                <h2>Build your order</h2>
+
+                <form id="orderForm">
+
+                    <fieldset>
+                        <legend>Your information</legend>
+
+                        <label for="studentName">Your name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            name="studentName"
+                            placeholder="Enter your name"
+                            required>
+
+                        <label for="meal">Choose your meal</label>
+                        <select id="meal" name="meal" required>
+                            <option value="">Select a meal</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Choose your size</legend>
+
+                        <label class="choice">
+                            <input type="radio" name="size" value="Regular"
+                                data-price="0" required>
+                            Regular — no extra charge
+                        </label>
+
+                        <label class="choice">
+                            <input type="radio" name="size" value="Large"
+                                data-price="10">
+                            Large — +GHS 10
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Add extras</legend>
+
+                        <label class="choice">
+                            <input type="checkbox" name="extras"
+                                value="Egg" data-price="5">
+                            Egg — GHS 5
+                        </label>
+
+                        <label class="choice">
+                            <input type="checkbox" name="extras"
+                                value="Chicken" data-price="15">
+                            Chicken — GHS 15
+                        </label>
+
+                        <label class="choice">
+                            <input type="checkbox" name="extras"
+                                value="Sausage" data-price="10">
+                            Sausage — GHS 10
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Order details</legend>
+
+                        <label for="quantity">Quantity</label>
+                        <input
+                            type="number"
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            max="10"
+                            value="1"
+                            required>
+
+                        <label for="instructions">Special instructions</label>
+                        <textarea
+                            id="instructions"
+                            name="instructions"
+                            rows="3"
+                            placeholder="Any special requests?"></textarea>
+                    </fieldset>
+
+                    <p id="formError" class="error" aria-live="polite"></p>
+
+                    <button type="submit" class="primary-button">
+                        Place order
+                    </button>
+
+                    <button type="reset" class="secondary-button">
+                        Clear form
+                    </button>
+
+                </form>
+            </div>
+
+            <aside class="receipt-panel">
+                <p class="eyebrow">YOUR ORDER</p>
+                <h2>Order summary</h2>
+
+                <div id="receipt" aria-live="polite">
+                    <p>Your receipt will appear here after you place your order.</p>
+                </div>
+            </aside>
+        </section>
+
+        <section id="survival" class="page-section survival-panel">
+            <p class="eyebrow">A LITTLE STUDENT WISDOM</p>
+            <h2>Survival corner 🎓</h2>
+            <p>Food, money, studying and sleep all matter.</p>
+
+            <button type="button" id="tipButton" class="primary-button">
+                Give me a survival tip
+            </button>
+
+            <p id="tip" aria-live="polite">
+                Click the button for a random student survival tip.
+            </p>
+        </section>
+
+        <section class="page-section rules">
+            <h2>Our student survival rules</h2>
+            <ol>
+                <li>Set a budget before ordering.</li>
+                <li>Keep quick, affordable meals available.</li>
+                <li>Take breaks when studying.</li>
+                <li>Make time for proper rest.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Student Food Hub</strong></p>
+        <p>&copy; 2026 Student Food Hub</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #26352c;
+    background: #f7f8f3;
+}
+
+.site-header {
+    background: #173f35;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 7%;
+    border-bottom: 1px solid #45675c;
+}
+
+.logo {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    max-width: 850px;
+    padding: 75px 7% 85px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin: 10px 0 20px;
+}
+
+.hero p {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #c58a43;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.primary-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #f0c27b;
+    color: #173f35;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.page-section {
+    padding: 55px 0;
+    scroll-margin-top: 20px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.page-section h2 {
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e2e7de;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.menu-icon {
+    font-size: 2.2rem;
+}
+
+.menu-card h3 {
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #17624a;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.stock {
+    color: #65746a;
+    font-size: 0.9rem;
+}
+
+.order-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.form-panel,
+.receipt-panel,
+.survival-panel,
+.rules {
+    padding: 25px;
+    background: white;
+    border: 1px solid #e2e7de;
+    border-radius: 14px;
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid #d8e0d8;
+    border-radius: 10px;
+}
+
+legend {
+    padding: 0 7px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5cb;
+    border-radius: 7px;
+    font: inherit;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #38785c;
+    outline-offset: 2px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: normal;
+}
+
+.choice input {
+    accent-color: #17624a;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 5px 5px 5px 0;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button {
+    color: white;
+    background: #17624a;
+}
+
+.primary-button:hover {
+    background: #104a37;
+}
+
+.secondary-button {
+    color: #26352c;
+    background: #e8eee7;
+}
+
+.receipt-panel {
+    position: sticky;
+    top: 20px;
+}
+
+.receipt-line,
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e6e9e2;
+}
+
+.receipt-total {
+    margin-top: 10px;
+    border-bottom: 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.receipt-note {
+    color: #65746a;
+    font-size: 0.9rem;
+}
+
+.error {
+    color: #b42318;
+    font-weight: bold;
+}
+
+.notice {
+    color: #17624a;
+}
+
+.survival-panel {
+    background: #fff7e9;
+}
+
+#tip {
+    font-weight: bold;
+}
+
+.rules li {
+    margin: 8px 0;
+}
+
+.site-footer {
+    padding: 30px 7%;
+    text-align: center;
+    color: white;
+    background: #173f35;
+}
+
+.site-footer p {
+    margin: 5px;
+}
+
+@media (max-width: 750px) {
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .receipt-panel {
+        position: static;
+    }
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
